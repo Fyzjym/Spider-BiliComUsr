@@ -1,0 +1,41 @@
+
+todo : b站评论表
+
+CREATE TABLE `BiliComment` (
+  `uname` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `sign` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `sex` varchar(16) COLLATE utf8_bin DEFAULT NULL,
+  `mid` int(64) DEFAULT NULL,
+  `current_level` int(16) DEFAULT NULL,
+  `ctime` varchar(32) COLLATE utf8_bin DEFAULT NULL,
+  `message` varchar(12222) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `plat` int(8) DEFAULT NULL,
+  `likehah` varchar(32) COLLATE utf8_bin DEFAULT NULL,
+  `rcount` int(32) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+todo : b站用户表
+
+CREATE TABLE `BiliUsrInfo` (
+  `mid` int(32) DEFAULT NULL,
+  `name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `sex` varchar(8) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `rank` int(16) DEFAULT NULL,
+  `face` varchar(1024) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `regtime` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `spacesta` int(8) DEFAULT NULL,
+  `birthday` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `sign` varchar(10241) COLLATE utf8_bin DEFAULT NULL,
+  `level` int(8) DEFAULT NULL,
+  `OfficialVerifyType` int(8) DEFAULT NULL,
+  `OfficialVerifyDesc` varchar(2048) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `vipType` int(8) DEFAULT NULL,
+  `vipStatus` int(8) DEFAULT NULL,
+  `toutu` varchar(1024) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `toutuId` int(8) DEFAULT NULL,
+  `coins` int(8) DEFAULT NULL,
+  `userFollowing` int(255) DEFAULT NULL,
+  `userFans` int(255) DEFAULT NULL,
+  `userArchiveView` int(255) DEFAULT NULL,
+  `userArticleView` int(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
